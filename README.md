@@ -4,18 +4,17 @@
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/se-2024/PATIENT_SERVICE_API">
     <img src="images/logo.png" alt="Logo">
   </a>
-
-<h3 align="center">PATIENT_SERVICE_API</h3>
+  
+  <h3 align="center">Patient Service API</h3>
 
   <p align="center">
-    This is a patient service api that will save and retrieve patient details. 
+    A robust API for managing patient details in a hospital management system.
     <br />
     <a href="https://github.com/se-2024/PATIENT_SERVICE_API/blob/main/docs/README.md"><strong>Explore the docs »</strong></a>
     <br />
@@ -25,8 +24,6 @@
     <a href="https://github.com/se-2024/PATIENT_SERVICE_API/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -45,22 +42,21 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#development">Development</a></li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#testing">Testing</a></li>
     <li><a href="#contributing">Contributing</a></li>
   </ol>
 </details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This is a Python-based RESTful API that is part of the Hospital Management System.
+This is a Python-based RESTful API that is part of the Hospital Management System. It allows for the saving and retrieving of patient details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ### Built With
 
@@ -68,140 +64,128 @@ This is a Python-based RESTful API that is part of the Hospital Management Syste
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To set up your project locally, follow these simple steps.
 
 ### Prerequisites
 
-Required software and how to install them.
-* python
-  - MacOS: follow this guide - https://docs.python-guide.org/starting/install3/osx/ 
+Ensure you have the following software installed:
+* Python
+  - MacOS: Follow this guide - [Install Python on MacOS](https://docs.python-guide.org/starting/install3/osx/)
 
 ### Installation
 
-- New repository setup
-  1. Fork the Project (from the github website)
-  2. Clone the forked repo locally
-      ```sh
-          git clone git@github.com:YOUR_USERNAME/PATIENT_SERVICE_API.git
-      ```
-  3. List the current configured remote repository for your fork. It should show only the forked version of the repository that you have just forked.
-    ```sh
-      $ git remote -v
-        > origin  git@github.com:YOUR_USERNAME/PATIENT_SERVICE_API.git (fetch)
-        > origin  git@github.com:YOUR_USERNAME/PATIENT_SERVICE_API.git (push)
-    ```
-  4. Specify a new remote upstream repository that will be synced with the fork.
-    ***NOTE***: This will be the original owner - the se-2024/PATIENT_SERVICE_API repo:
-    `git remote add upstream  https://github.com/se-2024/PATIENT_SERVICE_API.git`
+#### New Repository Setup
 
-  5. List out the remotes and this time you will have another remote:
+1. Fork the Project.
+2. Clone the forked repo locally:
     ```sh
-      $ git remote -v
-        origin	git@github.com:fbatroni/PATIENT_SERVICE_API.git (fetch)
-        origin	git@github.com:fbatroni/PATIENT_SERVICE_API.git (push)
-        upstream	git@github.com:se-2024/PATIENT_SERVICE_API.git (fetch)
-        upstream	git@github.com:se-2024/PATIENT_SERVICE_API.git (push)
+    git clone git@github.com:YOUR_USERNAME/PATIENT_SERVICE_API.git
     ```
-  
-- Existing repository setup   <br/>
-  ***NOTE***: You already have a PATIENT_SERVICE_API repo and you'd like to reset your existing repo to mirror the se-2024/PATIENT_SERVICE_API repo. These steps will result in resetting the existing code and ***any changes will be lost***.
-  1. List the current configured remote repository for your repo. You should only have one that points to your repository hosted under your github username.
+3. Verify the remote repository configuration:
     ```sh
-    $ git remote -v
-      > origin  git@github.com:YOUR_USERNAME/PATIENT_SERVICE_API.git (fetch)
-      > origin  git@github.com:YOUR_USERNAME/PATIENT_SERVICE_API.git (push)
+    git remote -v
     ```
-    If you have another remote you can delete it. The only other remote you will need will be the upstream to the shared repository.
-  2. Specify a new remote upstream repository that will be synced with your repo.
-    ***NOTE***: This will be the original owner - the se-2024/PATIENT_SERVICE_API repo:
-    `git remote add upstream  https://github.com/se-2024/PATIENT_SERVICE_API.git`
+4. Add the original repository as a remote upstream:
+    ```sh
+    git remote add upstream https://github.com/se-2024/PATIENT_SERVICE_API.git
+    ```
+5. Verify the new remote:
+    ```sh
+    git remote -v
+    ```
 
-  3. List out the remotes and this time you will have another remote:
-    ```sh
-      $ git remote -v
-        origin	git@github.com:fbatroni/PATIENT_SERVICE_API.git (fetch)
-        origin	git@github.com:fbatroni/PATIENT_SERVICE_API.git (push)
-        upstream	git@github.com:se-2024/PATIENT_SERVICE_API.git (fetch)
-        upstream	git@github.com:se-2024/PATIENT_SERVICE_API.git (push)
-    ```
-  4. Reset your local main branch to match the remote upstream
-    `git reset --hard upstream/main`
+#### Existing Repository Setup
 
-  5. Force push these changes to your repository so that all code is mirrored. This is a one-time operation.
-    `git push origin main -f`
+1. Verify the current remote repository configuration:
     ```sh
-      Enumerating objects: 27, done.
-      Counting objects: 100% (27/27), done.
-      Delta compression using up to 8 threads
-      Compressing objects: 100% (21/21), done.
-      Writing objects: 100% (27/27), 144.44 KiB | 10.32 MiB/s, done.
-      Total 27 (delta 0), reused 2 (delta 0), pack-reused 0
-      To github.com:fbatroni/PATIENT_SERVICE_API.git
-      + e0fc073...0be4789 main -> main (forced update)
+    git remote -v
+    ```
+2. Add the original repository as a remote upstream:
+    ```sh
+    git remote add upstream https://github.com/se-2024/PATIENT_SERVICE_API.git
+    ```
+3. Verify the new remote:
+    ```sh
+    git remote -v
+    ```
+4. Reset your local main branch to match the remote upstream:
+    ```sh
+    git reset --hard upstream/main
+    ```
+5. Force push the changes to your repository:
+    ```sh
+    git push origin main -f
     ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## Development
 
-### Coding standards
-- [pre-commit](https://pre-commit.com/) - Git hook scripts that are useful for identifying simple issues before submission to code review.
-- Code linting
-  - [Flake8](https://github.com/PyCQA/flake8) - A linter tool that checks your code for style and syntax errors
-- Code formatting
-  - Black - A Python code formatter that automatically formats your code according to a set of predefined rules
-- isort - A Python utility/library to sort imports alphabetically, and automatically separated into sections and by type
-* By using Flake8 and Black, you can ensure good quality of your Python code.
+### Coding Standards
+
+- [pre-commit](https://pre-commit.com/) - Git hook scripts for identifying simple issues before submission to code review.
+- Code linting:
+  - [Flake8](https://github.com/PyCQA/flake8) - A linter tool that checks your code for style and syntax errors.
+- Code formatting:
+  - [Black](https://github.com/psf/black) - A Python code formatter that automatically formats your code according to predefined rules.
+  - [isort](https://github.com/PyCQA/isort) - A utility/library to sort imports alphabetically and automatically separate them into sections and by type.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Include useful examples of how the project can be used. Additional screenshots, code examples, and demos work well in this space. You may also link to more resources.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+<!-- TESTING -->
 ## Testing
+
 ### Unit and Integration Testing
-[pytest framework](https://docs.pytest.org/en/7.1.x/getting-started.html) - a Python testing framework that can be used to write various types of software tests, including unit tests, integration tests, end-to-end tests, and functional tests
-[pytest-sqlalchemy-mock](https://github.com/resulyrt93/pytest-sqlalchemy-mock) - pytest fixtures to create an in-memory DB instance on tests and dump your raw test data
+
+- [pytest](https://docs.pytest.org/en/7.1.x/getting-started.html) - A Python testing framework for writing various types of software tests, including unit, integration, end-to-end, and functional tests.
+- [pytest-sqlalchemy-mock](https://github.com/resulyrt93/pytest-sqlalchemy-mock) - Pytest fixtures to create an in-memory DB instance for tests and dump your raw test data.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
-(Assuming you've followed the steps in "Installation" section):
-1. Fetch the latest from the upstream repository
-  `git fetch upstream`
-  ```sh
-  remote: Enumerating objects: 27, done.
-  remote: Counting objects: 100% (27/27), done.
-  remote: Compressing objects: 100% (21/21), done.
-  remote: Total 27 (delta 0), reused 27 (delta 0), pack-reused 0
-  Unpacking objects: 100% (27/27), 144.42 KiB | 1.60 MiB/s, done.
-  From github.com:se-2024/PATIENT_SERVICE_API
-  * [new branch]      main       -> upstream/main
-  ```
-2. Check out your fork's local default branch - in this case, we use main. 
-3. Merge the latest code from the upstream main branch into your local main
-  `git merge upstream/main`
-4. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-5. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-6. Push to the Branch (`git push origin feature/AmazingFeature`)
-7. Open a Pull Request
+1. Fetch the latest from the upstream repository:
+    ```sh
+    git fetch upstream
+    ```
+2. Check out your fork's local main branch:
+    ```sh
+    git checkout main
+    ```
+3. Merge the latest code from the upstream main branch:
+    ```sh
+    git merge upstream/main
+    ```
+4. Create your feature branch:
+    ```sh
+    git checkout -b feature/AmazingFeature
+    ```
+5. Commit your changes:
+    ```sh
+    git commit -m 'Add some AmazingFeature'
+    ```
+6. Push to the branch:
+    ```sh
+    git push origin feature/AmazingFeature
+    ```
+7. Open a pull request.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -214,4 +198,3 @@ Don't forget to give the project a star! Thanks again!
 [product-screenshot]: images/screenshot.png
 [FastAPI]: https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi
 [FastAPI-url]: https://fastapi.tiangolo.com/
-
